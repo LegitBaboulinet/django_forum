@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion - Django forum</title>
+    {% include 'modules/bootstrap.html' %}
+</head>
+<body>
+    <div class="container mt-4">
+        <form class="form" action="/login/" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" name="username" placeholder="D4rkKill3rzXX2007" />
+        </div>
+        <div class="form-group">
+            <label for="username">Password</label>
+            <input type="password" class="form-control" name="password" placeholder="Kim Jong Un" />
+        </div>
+        <input type="submit" class="btn btn-primary" value="Login" />
+    </form>
+    </div>
+</body>
+</html>
