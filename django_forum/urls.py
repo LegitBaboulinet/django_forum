@@ -18,10 +18,12 @@ from django.urls import path
 
 # Views
 from user.views import login, signup, dashboard
+from post.views import posts
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', login),
     path('signup/', signup),
     path('dashboard/', dashboard),
+    path('posts/page/<page_number>', posts)
 ]
